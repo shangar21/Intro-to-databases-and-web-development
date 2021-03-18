@@ -1,0 +1,1 @@
+5. As a student user, when I click on the assignments tab, I should be able to download the assignments from the assignments tab.

@@ -1,0 +1,1 @@
+10. As a student user, I should be able to get all the information, from downloading the lectures, to watching the videos, to the recordings and worksheets covered in the course when I click on the lectures/syllabus tab.

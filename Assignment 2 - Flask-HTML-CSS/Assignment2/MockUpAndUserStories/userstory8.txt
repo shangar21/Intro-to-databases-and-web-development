@@ -1,0 +1,1 @@
+8. As a student user, I should be able to submit my assignments thorugh navigating through Markus by clicking on the Markus tab which will take me to the Markus website.

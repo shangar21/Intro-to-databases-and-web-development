@@ -1,0 +1,230 @@
+.dark{
+    background-color:black;
+}
+
+
+.header{
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    color:white;
+}
+
+.nav{
+    
+    list-style:none;
+    margin:0;
+    padding:0;
+    text-align:center;
+    background-color:black
+}
+.nav li{
+    display:inline;
+    margin: 6px;
+
+}
+.nav a{
+
+    display:inline-block;
+    padding:10px;
+    color: white;
+    font-family:"Roboto";
+    margin: 6px;
+}
+
+.nav a:hover{
+    background-color:grey
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    background-color: #000000;
+    padding: 10px;
+    font-family: "roboto";
+    margin: 6px;
+}
+
+.container:hover{
+    -webkit-box-shadow: 0px 0px 5px 6px grey;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow:    0px 0px 5px 6px grey;  /* Firefox 3.5 - 3.6 */
+    box-shadow:         0px 0px 5px 6px grey;
+}
+
+
+.container-header{
+    color: white;
+    font-family: "Roboto";
+    font-size: 16px
+}
+
+.container-body{
+    color: white;
+    font-family: "Roboto";
+    font-size: 14px
+}
+
+.container-body a{
+    color: lightblue;
+}
+
+
+
+.assignmentheaders{
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    flex-grow: 1;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 3px;
+    border: 1px solid rgb(177, 172, 172);
+    color:rgb(255, 255, 255);
+    
+}
+
+.assignmentheaders:hover{
+    -webkit-box-shadow: 0px 0px 5px 6px #202020;  
+    -moz-box-shadow:    0px 0px 5px 6px #202020;  
+    box-shadow:         0px 0px 5px 6px #202020;
+}
+
+.submit{
+    font-family: "Roboto" sans-serif;
+    text-align: center;
+    background-color: rgb(79, 172, 79);
+    flex-grow: 1;
+    font-size: 14px;
+    padding: 5px;
+    border: 1px solid rgb(177, 172, 172);
+    color: white;
+}
+
+
+.submittograde{
+    color: white;
+}
+
+.submit:hover{
+    -webkit-box-shadow: 0px 0px 6px 6px #00ff00;  
+    -moz-box-shadow:    0px 0px 6px 6px #00ff00;  
+    box-shadow:         0px 0px 6px 6px #00ff00;
+}
+
+
+.notescontainer{
+    display: flex;
+    margin: 6px;
+
+}
+.notes{
+    font-family: "Roboto" sans-serif;
+    text-align: center;
+    background-color: rgb(0, 110, 255);
+    flex-grow: 1;
+    font-size: 14px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    border: 1px solid rgb(177, 172, 172);
+    color: white;
+}
+
+.notes:hover{
+    -webkit-box-shadow: 0px 0px 6px 6px #0000ff;  
+    -moz-box-shadow:    0px 0px 6px 6px #0000ff;  
+    box-shadow:         0px 0px 6px 6px #0000ff;
+}
+
+.due{
+
+    font-family: "Roboto" sans-serif;
+    text-align: center;
+    background-color: rgb(255, 61, 61);
+    flex-grow: 1;
+    font-size: 14px;
+    padding: 5px;
+    border: 1px solid rgb(177, 172, 172);
+    color: rgb(0, 0, 0);
+    
+
+}
+
+.due:hover{
+    -webkit-box-shadow: 0px 0px 6px 6px #ff0000;  
+    -moz-box-shadow:    0px 0px 6px 6px #ff0000;  
+    box-shadow:         0px 0px 6px 6px #ff0000;
+}
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(65, 61, 61);
+    color: #069420;
+    font-family: "Roboto", sans-serif;
+    
+}
+
+.linka{
+    color: #069420;
+    font-family: "Roboto", sans-serif;
+}
+
+.author{
+    color: #069420;
+    font-family: "Roboto", sans-serif;
+}
+
+
+.row{
+    display:flex;
+    margin: 6px;
+}
+
+.col-left, .col-right {
+    flex: 1;
+    color:white;
+    font-family: "Roboto";
+    padding: 10px;
+    border: 1px solid #373737;
+    margin:10px;
+    border-radius: 25px;
+}
+
+.col-left h5{
+    color:white;
+    font-family: "Roboto";
+    /* padding: 5px; */
+    font-size: 20px;
+    text-align:center;
+    font-weight: bold;
+}
+
+.col-p{
+    color:white;
+    font-family: "Roboto";
+    padding: 10px;
+    border: 1px solid #373737;
+    margin:10px;
+    border-radius: 10px;
+    text-align:center;
+}
+
+.col-pleft{
+    color:white;
+    font-family: "Roboto";
+    padding: 10px;
+    border: 1px solid #373737;
+    margin:10px;
+    border-radius: 10px;
+    text-align:left;
+}
+
+.col-left:hover{
+    -webkit-box-shadow: 0px 0px 5px 6px #202020;  
+    -moz-box-shadow:    0px 0px 5px 6px #202020;  
+    box-shadow:         0px 0px 5px 6px #202020;
+}

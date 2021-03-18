@@ -1,0 +1,1 @@
+6. As a student user, I should be able to see the labs for every week when I click on the Labs tab.

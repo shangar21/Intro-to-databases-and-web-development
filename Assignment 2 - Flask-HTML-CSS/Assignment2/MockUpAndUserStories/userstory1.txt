@@ -1,0 +1,1 @@
+1. As a student user, the student must be able to join both lectures in Zoom from the homepage

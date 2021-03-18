@@ -1,0 +1,1 @@
+3. As a student user, I must be able to see all of the content covered in each week when I click on the lectures/syllabus tab in a row-sorted manner.

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome is a library for icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <title>Rock - Paper - Scissors</title>
+</head>
+<body>
+    <header>
+        <h1>Rock - Paper - Scissors</h1>
+    </header>
+    <div class="card">
+        <div class="card-header">Select an Option</div>
+        <div class="flex-container">
+            <div class="flex-item" onclick="play('ROCK')">
+                <!-- these icons come from the Font Awesome library -->
+                <i class="far fa-hand-rock fa-6x"></i>
+                <br>
+                <br>
+                Rock
+            </div>
+            <div class="flex-item" onclick="play('PAPER')">
+                <i class="far fa-hand-paper fa-6x"></i>
+                <br>
+                <br>
+                Paper
+            </div>
+            <div class="flex-item" onclick="play('SCISSORS')">
+                <i class="far fa-hand-scissors fa-6x"></i>
+                <br>
+                <br>
+                Scissors
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header">Game Log</div>
+        <!-- use document.getElementById() on this id -->
+        <ul id="game-content">
+            <!-- game content should be in the form of <li> elements added here -->
+        </ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

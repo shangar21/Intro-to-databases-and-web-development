@@ -1,0 +1,215 @@
+.dark{
+    background-color:black;
+}
+
+a{
+    display:inline-block;
+    padding:10px;
+    color: white;
+    font-family:"Roboto"
+}
+
+a:hover{
+    -webkit-box-shadow: 0px 0px 5px 6px blue;  
+    -moz-box-shadow:    0px 0px 5px 6px blue;  
+    box-shadow:         0px 0px 5px 6px blue;
+}
+
+
+.header{
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    color:white;
+    
+}
+
+.header:hover{
+    font-size: 32px;
+}
+
+.nav{
+    
+    list-style:none;
+    margin:0;
+    padding:0;
+    text-align:center;
+    background-color:black
+}
+.nav li{
+    display:inline;
+
+}
+.nav a{
+
+    display:inline-block;
+    padding:10px;
+    color: white;
+    font-family:"Roboto"
+}
+
+.nav a:hover{
+    background-color:#3333cc;
+}
+
+.row{
+    display:flex;
+    margin: 6px;
+}
+
+.col-left, .col-right {
+    flex: 1;
+    color:white;
+    font-family: "Roboto";
+    padding: 10px;
+    border: 1px solid #373737;
+    margin:10px;
+    border-radius: 25px;
+}
+
+.col-p{
+    color:white;
+    font-family: "Roboto";
+    padding: 10px;
+    border: 1px solid #373737;
+    margin:10px;
+    border-radius: 10px;
+    text-align:center;
+}
+
+.col-pleft{
+    color:white;
+    font-family: "Roboto";
+    padding: 10px;
+    border: 1px solid #373737;
+    margin:10px;
+    border-radius: 10px;
+    text-align:left;
+}
+
+.topic{
+    color:white;
+    font-family: "Roboto";
+    /* padding: 5px; */
+    font-size: 20px;
+    text-align:center;
+    font-weight: bold;
+}
+
+
+.col-left:hover{
+    -webkit-box-shadow: 0px 0px 5px 6px #202020;  
+    -moz-box-shadow:    0px 0px 5px 6px #202020;  
+    box-shadow:         0px 0px 5px 6px #202020;
+}
+
+.col-right:hover{
+    -webkit-box-shadow: 0px 0px 5px 6px #202020;  
+    -moz-box-shadow:    0px 0px 5px 6px #202020;  
+    box-shadow:         0px 0px 5px 6px #202020;
+}
+
+.col-p:hover{
+    -webkit-box-shadow: 0px 0px 5px 6px #3333cc;  
+    -moz-box-shadow:    0px 0px 5px 6px #3333cc;  
+    box-shadow:         0px 0px 5px 6px #3333cc;
+}
+
+.col-pleft:hover{
+    -webkit-box-shadow: 0px 0px 5px 6px #3333cc;  
+    -moz-box-shadow:    0px 0px 5px 6px #3333cc;  
+    box-shadow:         0px 0px 5px 6px #3333cc;
+}
+
+.row-header{
+    color: white;
+    background-color:#383838;
+    text-align:center;
+    font-family: "Roboto";
+    font-size: 20px;
+    padding: 10px;
+    border: 1px solid #373737;
+    border-radius: 15px;
+}
+
+.row-subheader{
+    color: white;
+    background-color:#3333cc;
+    text-align:center;
+    font-family: "Roboto";
+    font-size: 16px;
+    padding: 5px;
+    border: 1px solid #373737;
+    border-radius: 15px;
+}
+
+.row-header:hover{
+    -webkit-box-shadow: 0px 0px 5px 6px #696969;  /*had to for atleast one of them lol*/
+    -moz-box-shadow:    0px 0px 5px 6px #696969;  
+    box-shadow:         0px 0px 5px 6px #696969;
+}
+
+.row-subheader:hover{
+    -webkit-box-shadow: 0px 0px 5px 6px #696969;  /*had to for atleast one of them lol*/
+    -moz-box-shadow:    0px 0px 5px 6px #696969;  
+    box-shadow:         0px 0px 5px 6px #696969;
+}
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color:  rgb(65, 61, 61);
+    color: #069420;
+    font-family: "Roboto", sans-serif;
+    
+}
+
+.linka{
+    color: #069420;
+    font-family: "Roboto", sans-serif;
+}
+
+.author{
+    color: #069420;
+    font-family: "Roboto", sans-serif;
+}
+
+
+
+
+/* .container, .container-right {
+    display: flex;
+    flex-flow: column wrap;
+    width: 50%;
+    background-color: #373737;
+    padding: 10px;
+    font-family: "roboto";
+    flex: 1;
+}
+
+.container:hover{
+    -webkit-box-shadow: 0px 0px 5px 6px grey;  
+    -moz-box-shadow:    0px 0px 5px 6px grey;  
+    box-shadow:         0px 0px 5px 6px grey;
+}
+
+
+.container-header{
+    color: white;
+    font-family: "Roboto";
+    font-size: 16px
+}
+
+.container-body{
+    color: white;
+    font-family: "Roboto";
+    font-size: 14px
+}
+
+.container-body a{
+    color: lightblue;
+} */

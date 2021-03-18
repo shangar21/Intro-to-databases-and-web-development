@@ -1,0 +1,1 @@
+7. As a student user, I should be redirected to the Piazza page to the class when I click on the discussion board tab near the header of the homepage (or any page for that matter).
