@@ -1,0 +1,40 @@
+{% extends "header.html" %}
+{% block content %}
+        <center>
+            <p class="header">Syllabus</p>
+        </center>
+
+        <div class="row">
+            {% for key, value in info.items() %}
+            <div class="col-left">
+                <h1 class="row-header">Week {{ key }}</h1>
+                <p class="row-subheader">{{ value[0][0][0] }}</p>
+                <p class="col-p">
+                    {% for h in value[0][2] %} 
+                    <a href="{{ value[0][1][loop.index - 1] }}"> {{ h }}</a>
+                    {% endfor %}
+                </p>
+                <p class="col-p">
+                    {% for h in value[0][4] %} 
+                    <a href="{{ value[0][3][loop.index - 1] }}"> {{ h }}</a>
+                    {% endfor %}
+                </p>
+                {% if instructor %}
+                <center>
+                    <div class="col_pleft">
+                        
+                            <form action="/edit_entry">
+                                <input name="edit" value="Edit Labs {{ key }}" type="submit">
+                            </form>
+                            <form action="/remove_entry">
+                                <input name="delete" value="Remove Labs {{ key }}" type="submit">
+                            </form>
+                    
+                    </div>
+                    </center>
+                {% endif %}
+            </div>
+            {% endfor %}
+        </div>
+
+{% endblock %}

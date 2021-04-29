@@ -1,0 +1,55 @@
+{% extends "header.html" %}
+{% block content %}
+        <center>
+            <p class="header">Assignments</p>
+        </center>
+
+        <div class="row">
+            {% for key, value in info.items() %}
+            <div class="col-left">
+                <h1 class="row-header">{{ value[0][-1] }}</h1>
+                <div>
+                    <div class="col-pleft">
+                        <center>
+                            <a href="{{ value[0][0] }}">PDF</a>
+                        </center>                        
+                    </div>
+                    <div class="col-pleft">
+                        <center>
+                            <a href="{{ value[0][1] }}">TEX</a>
+                        </center>
+                    </div>
+                    <div class="col-pleft">
+                        <center>
+                            DUE DATE: {{ value[0][2] }}
+                        </center>
+                    </div>
+                    <center>
+                        <a href="https://gradescope.com">
+                            <div class="col-pleft">
+                                    SUBMIT
+                            </div>
+                        </a>
+                    </center>
+                </div>
+                {% if instructor %}
+                <center>
+                    <div class="col_pleft">
+                        
+                            <form action="/edit_entry">
+                                <input name="edit" value="Edit Assignments {{ key }}" type="submit">
+                            </form>
+                            <form action="/remove_entry">
+                                <input name="delete" value="Remove Assignments {{ key }}" type="submit">
+                            </form>
+                    
+                    </div>
+                    </center>
+                {% endif %}                 
+            </div>
+            
+            {% endfor %}
+        </div>
+
+{% endblock %}
+

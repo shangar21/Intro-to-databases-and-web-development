@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="./static/style.css">
+    <title>CSCB63</title>
+</head>
+<body class="dark">
+
+    <div align="center">
+        {% with messages = get_flashed_messages()%}
+        {% if messages %}
+            <ul class="col-p">
+                {% for message in messages %} 
+                <li>{{ message }}</li>
+                {% endfor %} 
+            </ul>
+        {% endif %} 
+        {% endwith %} 
+
+    </div>
+    <center>
+        <a href="/">
+            <p class="header">CSCB63 DESIGN AND ANALYSIS OF DATA STRUCTURES</p>
+        </a>
+    </center>
+    
+    <center>
+        <p class="header">Student Account Creation </p>
+    </center>
+    <div align="center">
+        <form action='/add_item'>
+            <input type="hidden" name="db" value="StudentUsers">
+            <input name="username" value="username">
+            <br>
+            <input name="password" value="password">
+            <br>
+            <input name="firstName" value="first name">
+            <br>
+            <input name="lastName" value="last name">
+            <br>
+            <input name="studentNo" value="studentNo">
+            <br>
+            <input type="submit" name="submit" value="submit">        
+        </form>
+    </div>
+
+
+</body>

@@ -66,7 +66,6 @@ function cell_clicked(event){
 
         if (check_win(current_play) != ''){
             alert("Game over: " + check_win(current_play) + " won!");
-            empty_cells(current_play);
         }
         computer_turn(current_play);
     }
@@ -84,3 +83,4 @@ function cell_clicked(event){
 
 
 document.querySelectorAll('.cell').forEach(cell => cell.addEventListener('click', cell_clicked))
+document.querySelectorAll('.reset').addEventListener('click', empty_cells(current_play))

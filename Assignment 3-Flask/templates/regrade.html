@@ -1,0 +1,29 @@
+{% extends "header.html" %}
+{% block content %}
+    <center>
+        <p class="header">Submit a Regrade Request</p>
+    </center>
+    <body>
+        
+    
+
+    <div align="center">
+        <form action='/add_item'>
+            <input type="hidden" name = "db" value="Regrade">
+            <input name="student_username", placeholder="Enter your username as it appears">
+            <input name="assignment", placeholder="Enter the evalution to be regraded">
+            <textarea name="reason", placeholder="Reason"></textarea>
+            <br>
+            <input onclick="regradeSuccess()"type="submit" name="submit" value="Submit">        
+            <script>
+                function regradeSuccess() {
+                    alert("Regrade request sent successfully!");
+                }
+            </script>
+        </form>
+
+    </div>
+
+</body>
+
+{% endblock %}

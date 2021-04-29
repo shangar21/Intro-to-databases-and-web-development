@@ -1,0 +1,198 @@
+{% extends "header.html" %}
+{% block content %}
+
+    {% if instructor %}
+    <center>
+        <p class="header">ADMIN</p>
+    </center>
+
+    <div align="center">
+        {% with messages = get_flashed_messages()%}
+        {% if messages %}
+            <ul class="col-p">
+                {% for message in messages %} 
+                <li>{{ message }}</li>
+                {% endfor %} 
+            </ul>
+        {% endif %} 
+        {% endwith %} 
+    </div>
+
+    <center>
+        <p class="header">Add To Syllabus</p>
+    </center>
+    <div align="center">
+        <form action='/add_item'>
+            <input type="hidden" name = "db" value="Syllabus"></textarea>
+            <textarea name="topic" value="topic">topic</textarea>
+            <br>
+            <textarea name="wed_pre_lec" value="Insert Links or TB chapter To Wednesday Pre Lecture Material Seperated with Commas, put in 'None' if there is nothing">Insert Links or TB chapter To Wednesday Pre Lecture Material Seperated with Commas, put in 'None' if there is nothing</textarea>
+            <br>
+            <textarea name="wed_pre_lec_labels" value="Insert Labels of Above Material Seperated by Comma, if not link simply repeat input">Insert Labels of Above Material Seperated by Comma, if not link simply repeat input</textarea>
+            <br>
+            <textarea name="thurs_pre_lec" value="Insert Links or TB chapter To Thurday Pre Lecture Material Seperated with Commas, put in 'None' if there is nothing">Insert Links or TB chapter To Thurday Pre Lecture Material Seperated with Commas, put in 'None' if there is nothing</textarea>
+            <br>
+            <textarea name="thurs_pre_lec_labels" value="Insert Labels of Above Material Seperated by Comma, if not link simply repeat input">Insert Labels of Above Material Seperated by Comma, if not link simply repeat input</textarea>
+            <br>
+            <textarea name="wed_lec" value="Insert Links for Wednesday Lecture Material and Recordings Seperated with Commas, put in 'None' if there is nothing">Insert Links for Wednesday Lecture Material and Recordings Seperated with Commas, put in 'None' if there is nothing</textarea>
+            <br>
+            <textarea name="wed_lec_labels" value="Insert Labels of Above Material Seperated by Comma, if not link simply repeat input">Insert Labels of Above Material Seperated by Comma, if not link simply repeat input</textarea>
+            <br>
+            <textarea name="thurs_lec" value="Insert Links for Thurday Lecture Material and Recordings Seperated with Commas, put in 'None' if there is nothing">Insert Links for Thurday Lecture Material and Recordings Seperated with Commas, put in 'None' if there is nothing</textarea>
+            <br>
+            <textarea name="thurs_lec_labels" value="Insert Labels of Above Material Seperated by Comma, if not link simply repeat input">Insert Labels of Above Material Seperated by Comma, if not link simply repeat input</textarea>
+            <br>
+            <input type="submit" name="submit" value="submit">        
+        </form>
+    </div>
+
+    <center>
+        <p class="header">Create Assignment </p>
+    </center>
+    <div align="center">
+        <form action='/add_item'>
+            <input type="hidden" name = "db" value="Assignments">
+            <textarea name="pdf" value="pdf">pdf</textarea>
+            <br>
+            <textarea name="tex" value="tex">tex</textarea>
+            <br>
+            <textarea name="dueDate" value="Due Date">Due Date</textarea>
+            <br>
+            <textarea name="weight" value="Weight">Weight</textarea>
+            <br>
+            <textarea name="assignmentDescription" value="Assignment Description">Assignment Description</textarea>
+            <br>
+            <input type="submit" name="submit" value="submit">        
+        </form>
+    </div>
+
+    <center>
+        <p class="header">Add to Labs</p>
+    </center>
+    <div align="center">
+        <form action='/add_item'>
+            <input type="hidden" name = "db" value="Labs">
+            <textarea name="topic" value="topic">topic</textarea>
+            <br>
+            <textarea name="handout" value="Insert Link for Handout seperated with commas, if None put 'None'">Insert Link for Handout seperated with commas, if None put 'None'</textarea>
+            <br>
+            <textarea name="handout_label" value="Insert Labels for Handouts above, if None pup 'None'">Insert Labels for Handouts above, if None put 'None'</textarea>
+            <br>
+            <textarea name="solutions" value="Insert Link for Solutions seperated with commas, if None put 'None'">Insert Link for Solutions seperated with commas, if None put 'None'</textarea>
+            <br>
+            <textarea name="solutions_label" value="Insert Labels for Handouts above, if None pup 'None'">Insert Labels for Handouts above, if None put 'None'</textarea>
+            <br>
+            <input type="submit" name="submit" value="submit">        
+        </form>
+    </div>
+
+    <center>
+        <p class="header">Update Evaluation Grade</p>
+    </center>
+    <div align="center">
+        <form action='/update_student_grade'>
+            <input name="aid" value="Assignment #">
+            <br>
+            <input name="username" value="Student's Username">
+            <br>
+            <input name="grade" value="Grade Received">
+            <br>
+            <input type="submit" name="submit" value="submit">
+        </form>
+    </div>
+
+    <center>
+        <p class="header">Student Grades</p>
+    </center>
+
+    <center>
+        <div class="resp-table">
+            <div class="tableRow"> 
+                <div class="tableHeader">Username</div>
+                <div class="tableHeader">Total</div>
+                {% for key, value in assignments.items() %} 
+                <div class="tableHeader">{{ key }}</div>
+                {% endfor %}
+
+            </div>
+            {% for key, value in grade_info.items() %} 
+            <div class="tableRow">
+
+                <div class="tableData">{{ key }}</div>
+                <div class="tableData">{{ total[key] }}</div>
+                {% for g in value %} 
+                <div class="tableData"> {{ g[1] }}</div>
+                {% endfor %} 
+
+            </div>
+            {% endfor %} 
+        </div>
+    </center>
+
+    <!--This is for the regrade requests-->
+    <center>
+        <p class="header">Regrade Requests</p>
+        <div class="resp-table">
+            <div class="tableRow">
+                <div class="tableHeader">Username</div>
+                <div class="tableHeader">Evaluation</div>
+                <div class="tableHeader">Reason</div>
+                <div class="tableHeader">Remove</div>
+            </div>
+                {% for key, value in regrades.items() %}
+            <div class="tableRow">
+                {% for g in value %}
+
+                <div class="tableData"> {{ g[0] }}</div>
+                <div class="tableData"> {{ g[1] }}</div>
+                <div class="tableData"> {{ g[2] }}</div>
+                <div class="tableData">
+                    <form action="/remove_entry">
+                        <input name="delete" value="Remove Regrade {{ key }}" type="submit">
+                    </form>
+                </div>
+                <div class="tableRow"><div class="tableData"><br></div></div>
+
+                {% endfor %}
+
+            </div>
+            {% endfor %}
+        </div>
+
+    </center>
+
+
+    {% else %}
+        <center>
+            <p class="header">{{ user }} Marks</p>
+        </center>
+
+        <center>
+            <p class="topic">{{ user }}'s current grade is: {{ total[user] }}</p>
+        </center>
+
+        <center>
+            <div class="resp-table">
+                <div class="tableRow"> 
+                    <div class="tableHeader">Username</div>
+                    {% for key, value in assignments.items() %} 
+                    <div class="tableHeader">{{ key }}</div>
+                    {% endfor %}
+                </div>
+                {% for key, value in grade_info.items() %} 
+                <div class="tableRow">
+                    <div class="tableData">{{ key }}</div>
+                    {% for g in value %} 
+                    <div class="tableData"> {{ g[1] }}</div>
+                    {% endfor %} 
+                </div>
+                {% endfor %} 
+            </div>
+        </center>
+
+        <center>
+            <a href="/regrade">Click here to submit a regrade request</a>
+        </center>
+    {% endif %}
+
+{% endblock %}

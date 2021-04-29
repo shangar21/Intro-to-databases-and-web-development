@@ -1,0 +1,54 @@
+{% extends "header.html" %}
+{% block content %}
+        <center>
+            <p class="header">Syllabus</p>
+        </center>
+
+        <div class="row">
+            {% for key, value in info.items() %}
+            <div class="col-left">
+                <h1 class="row-header">Week {{ key }}</h1>
+                <p class="topic">{{ value [0][0][0] }}</p>
+                <p class="row-subheader">Wednesday</p>
+                <p class="col-p">
+                    {% for pre_lec in value[0][2] %}
+                    <a href='{{ value[0][1][loop.index - 1] }}'>{{ pre_lec }}</a>
+                    {% endfor %}
+                </p>
+                <p class="col-p">
+                    {% for lec in value[0][6] %}
+                    <a href='{{ value[0][5][loop.index - 1] }}'>{{ lec }}</a>
+                    {% endfor %}
+                </p>
+                <p class="row-subheader"> Thurday</p>
+                <p class="col-p">
+                    {% for pre_lec in value[0][4] %}
+                    <a href='{{ value[0][3][loop.index - 1] }}'>{{ pre_lec }}</a>
+                    {% endfor %}
+                </p>
+                <p class="col-p">
+                    {% for lec in value[0][8] %}
+                    <a href='{{ value[0][7][loop.index - 1] }}'>{{ lec }}</a>
+                    {% endfor %}
+                </p>
+                {% if instructor %}
+                <center>
+                    <div class="col_pleft">
+                        
+                            <form action="/edit_entry">
+                                <input name="edit" value="Edit Syllabus {{ key }}" type="submit">
+                            </form>
+                            <form action="/remove_entry">
+                                <input name="delete" value="Remove Syllabus {{ key }}" type="submit">
+                            </form>
+                    
+                    </div>
+                    </center>
+                {% endif %} 
+            </div>
+
+            
+            {% endfor %}
+        </div>
+
+{% endblock %}

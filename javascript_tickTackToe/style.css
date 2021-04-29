@@ -2,7 +2,7 @@ body{
     background-color: #000000;
 }
 
-h1{
+h1, h2{
     text-align: center;
     font-family: "Roboto";
     color: #FFFFFF;
@@ -24,3 +24,4 @@ h1{
     font-size: 60px;
     font-family: "Roboto";
 }
+

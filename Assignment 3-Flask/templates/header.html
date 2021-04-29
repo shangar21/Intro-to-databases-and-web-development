@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="./static/style.css">
+    <title>CSCB63</title>
+</head>
+
+<html>
+
+    <body class="dark">
+        {% if user %}
+        <center>
+            <p class="header">CSCB63 DESIGN AND ANALYSIS OF DATA STRUCTURES</p>
+        </center>
+        
+        
+        <ul class="nav">
+            <li><a>{{ user }}</a></li>
+            <li><a href="/home">Home</a></li>
+            <li><a href="/calendar">Calendar</a></li>
+            <li><a href="/syllabus">Syllabus</a></li>
+            <li><a href="/assignments">Assignments</a></li>
+            <li><a href="/labs">Labs</a></li>
+            <li><a href="https://piazza.com/utoronto.ca/winter2021/cscb63h3slec01/home">Piazza</a></li>
+            <li><a href="https://markus.utsc.utoronto.ca/">Markus</a></li>
+            <li><a href="/feedback">Feedback</a></li>
+            <li><a href="/dashboard">Dashboard</a></li>
+            <li><a href="/logout"> Log Out</a></li>
+        </ul>
+
+       {% block content %}
+       {% endblock %}
+
+    {% else %}
+    <center>
+        <p class="header">You are not Logged In!</p>
+        <a href='/'>Click Here To Log In!</a>
+    </center>
+    {% endif %}
+
+
+       <footer class="footer">
+        <a href="https://www.utsc.utoronto.ca/cms/faculty-of-computer-science">Link to faculty of Comptuer Science</a>
+        <a href="https://shangar.ddns.net/">Site design by Sharanshangar Muhunthan and Abdullah Hasan</a> 
+    </footer>
+</body>
+</html>
